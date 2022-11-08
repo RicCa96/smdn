@@ -8,7 +8,6 @@ import {TranslateService} from "@ngx-translate/core";
   styleUrls: ['./app.component.less']
 })
 export class AppComponent implements OnInit {
-  title = 'smdn';
 
   constructor(
     private primengConfig: PrimeNGConfig,
@@ -21,9 +20,5 @@ export class AppComponent implements OnInit {
     this.translateService.setDefaultLang('it');
     this.translateService.use('it');
     this.translateService.get('primeng').subscribe(res => this.primengConfig.setTranslation(res));
-  }
-
-  translate(lang: string) {
-    this.translateService.use(lang);
   }
 }
