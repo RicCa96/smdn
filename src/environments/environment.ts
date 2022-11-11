@@ -4,10 +4,7 @@
 
 export const environment = {
   production: false,
-  langOptions: [
-    {label: 'Italiano', value: 'it'},
-    {label: 'English', value: 'en'}
-  ]
+  langOptions: ['it', 'gb',]
 };
 
 /*

@@ -11,7 +11,7 @@ export class LangDropdownComponent {
 
   readonly langOptions = environment.langOptions;
 
-  lang: string = this.langOptions[0].value;
+  lang: string = this.langOptions[0];
 
   constructor(
     private translateService: TranslateService
