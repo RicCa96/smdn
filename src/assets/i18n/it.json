@@ -45,5 +45,35 @@
     "passwordPrompt": "Inserisci una password",
     "emptyMessage": "Nessun risultato ottenuto",
     "emptyFilterMessage": "Nessun risultato ottenuto"
+  },
+  "menu": {
+    "public": {
+      "home": "Home",
+      "schedule": "Programmazione",
+      "orders": "Ordina subito"
+    },
+    "admin": {
+      "security": {
+        "label": "Sicurezza",
+        "signup": "Nuovo utente"
+      },
+      "collections": {
+        "label": "Anagrafiche",
+        "dish-categories": "Categorie piatto",
+        "dishes": "Piatti",
+        "restaurants": "Ristoranti",
+        "scheduled-events": "Programma eventi"
+      }
+    },
+    "auth": {
+      "pos": {
+        "label": "POS",
+        "counter": "Cassa"
+      },
+      "reports": {
+        "label": "Reports",
+        "emitted-orders": "Ordini emessi"
+      }
+    }
   }
 }

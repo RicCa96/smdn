@@ -45,5 +45,35 @@
     "passwordPrompt": "Enter a password",
     "emptyMessage": "No results found",
     "emptyFilterMessage": "No results found"
+  },
+  "menu": {
+    "public": {
+      "home": "Home",
+      "schedule": "Event schedule",
+      "orders": "Order now"
+    },
+    "admin": {
+      "security": {
+        "label": "Security",
+        "signup": "New user"
+      },
+      "collections": {
+        "label": "Collections",
+        "dish-categories": "Dish categories",
+        "dishes": "Dishes",
+        "restaurants": "Restaurants",
+        "scheduled-events": "Scheduled events"
+      }
+    },
+    "auth": {
+      "pos": {
+        "label": "POS",
+        "counter": "Counter"
+      },
+      "reports": {
+        "label": "Reports",
+        "emitted-orders": "Emitted orders"
+      }
+    }
   }
 }
