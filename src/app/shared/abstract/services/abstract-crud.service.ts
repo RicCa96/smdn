@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 
 export abstract class AbstractCrudService<T> {
@@ -19,13 +19,15 @@ export abstract class AbstractCrudService<T> {
   }
 
   getList(currentPage?: number, pageSize?: number) {
-    let queryParams = ``;
-    if (currentPage && pageSize){
-      queryParams = `?pageSize=${pageSize}&page=${currentPage}`;
+    const params = new HttpParams();
+    if (currentPage && pageSize) {
+      params.set('page', currentPage);
+      params.set('pageSize', pageSize);
     }
     this.crudClient
       .get<{ totalResults: number, list: T[] }>(
-        `${this.basePath}${queryParams}`
+        `${this.basePath}`,
+        {params}
       )
       .subscribe(
         response => {
