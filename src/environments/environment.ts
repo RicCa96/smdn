@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  langOptions: ['it', 'gb',]
+  langOptions: ['it', 'gb',],
+  apiUrl: `http://localhost:3000`
 };
 
 /*
