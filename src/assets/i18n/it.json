@@ -1,4 +1,9 @@
 {
+  "generic": {
+    "messages": {
+      "confirm-deletion": "L'elemento verrà eliminato definitivamente. Vuoi procedere?"
+    }
+  },
   "primeng": {
     "startsWith": "Inizia per",
     "contains": "Contiene",
