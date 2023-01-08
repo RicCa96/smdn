@@ -1,12 +1,26 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {MenuItem} from "primeng/api";
+import {AuthService} from "../../services/auth.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuService {
 
+  private authService = inject(AuthService);
+
   constructor() {
+  }
+
+  getUserMenu(): MenuItem[] {
+    let rv = [...this.publicMenu()];
+    if (this.authService.getIsAuthenticated()) {
+      if (this.authService.isUserAdmin()) {
+        rv = [...rv, ...this.adminMenu()];
+      }
+      rv = [...rv, ...this.authMenu()];
+    }
+    return rv;
   }
 
   get separator(): MenuItem {
