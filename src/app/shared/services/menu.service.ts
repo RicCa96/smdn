@@ -1,6 +1,7 @@
 import {inject, Injectable} from '@angular/core';
 import {MenuItem} from "primeng/api";
 import {AuthService} from "../../services/auth.service";
+import {TranslateService} from "@ngx-translate/core";
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ import {AuthService} from "../../services/auth.service";
 export class MenuService {
 
   private authService = inject(AuthService);
+  private translateService = inject(TranslateService);
 
   constructor() {
   }
@@ -32,7 +34,7 @@ export class MenuService {
   publicMenu(): MenuItem[] {
     return [
       {
-        label: 'menu.public.home',
+        label: this.translateService.instant('menu.public.home'),
         url: ''
       },
       {

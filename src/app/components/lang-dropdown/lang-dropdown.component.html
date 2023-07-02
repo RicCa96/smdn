@@ -1,10 +1,10 @@
 <p-dropdown [(ngModel)]="lang" [options]="langOptions" (onChange)="translate()">
   <ng-template pTemplate="selectedItem">
-    <i [class]="'flag-icon flag-icon-' + lang"></i>
+    <i [class]="'fi fi-' + lang"></i>
   </ng-template>
   <ng-template let-item pTemplate="item">
     <div class="flex justify-content-center">
-      <i [class]="'flag-icon flag-icon-' + item"></i>
+      <i [class]="'fi fi-' + item"></i>
     </div>
   </ng-template>
 </p-dropdown>
