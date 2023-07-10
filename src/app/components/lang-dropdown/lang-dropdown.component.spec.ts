@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { LangDropdownComponent } from './lang-dropdown.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {LangDropdownComponent} from './lang-dropdown.component';
 import {TranslateFakeLoader, TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 import {environment} from "../../../environments/environment";
 
@@ -17,7 +17,8 @@ describe('LangDropdownComponent', () => {
             provide: TranslateLoader,
             useClass: TranslateFakeLoader
           }
-        })],
+        })
+      ],
       providers: [TranslateService]
     }).compileComponents();
   });
