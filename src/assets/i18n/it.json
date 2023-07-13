@@ -1,4 +1,5 @@
 {
+  "app_name": "smdn",
   "generic": {
     "messages": {
       "confirm_deletion": "L'elemento verrà eliminato definitivamente. Vuoi procedere?"

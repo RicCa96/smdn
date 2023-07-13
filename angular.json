@@ -29,10 +29,11 @@
             ],
             "styles": [
               "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/themes/saga-orange/theme.css",
+              "src/assets/themes/smdn-theme.css",
               "node_modules/primeng/resources/primeng.min.css",
               "node_modules/flag-icons/less/flag-icons.less",
               "node_modules/primeflex/primeflex.css",
+              "src/assets/themes/smdn-theme-override.less",
               "src/styles.less"
             ],
             "scripts": []
