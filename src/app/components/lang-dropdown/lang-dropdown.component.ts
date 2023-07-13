@@ -1,13 +1,14 @@
-/**
- * LangDropdownComponent is an Angular component that represents a language dropdown.
- * It allows the user to select a language and triggers a translation when the language is changed.
- */
-import { Component } from '@angular/core';
-import { environment } from "../../../environments/environment";
-import { TranslateService } from "@ngx-translate/core";
-import { DropdownModule } from "primeng/dropdown";
-import { FormsModule } from "@angular/forms";
+import {Component} from '@angular/core';
+import {environment} from "../../../environments/environment";
+import {TranslateService} from "@ngx-translate/core";
+import {DropdownModule} from "primeng/dropdown";
+import {FormsModule} from "@angular/forms";
 
+/**
+ * The LangDropdownComponent displays a dropdown menu for selecting a language.
+ *
+ * @class LangDropdownComponent
+ */
 @Component({
   selector: 'app-lang-dropdown',
   standalone: true,
@@ -16,22 +17,26 @@ import { FormsModule } from "@angular/forms";
   styleUrls: ['./lang-dropdown.component.less']
 })
 export class LangDropdownComponent {
-
   /**
-   * langOptions represents the available language options.
-   * It is populated from the environment configuration.
+   * The available language options for the dropdown menu.
+   *
+   * @property {Array} langOptions
+   * @readonly
    */
   readonly langOptions = environment.langOptions;
 
   /**
-   * lang represents the currently selected language.
-   * It is initialized with the first option from langOptions.
+   * The currently selected language.
+   *
+   * @property {string} lang
    */
   lang: string = this.langOptions[0];
 
   /**
-   * Creates an instance of LangDropdownComponent.
-   * @param translateService The TranslateService used for language translation.
+   * Creates a new instance of the LangDropdownComponent.
+   *
+   * @constructor
+   * @param {TranslateService} translateService - The TranslateService for translating the app.
    */
   constructor(
     private translateService: TranslateService
@@ -39,11 +44,12 @@ export class LangDropdownComponent {
   }
 
   /**
-   * Translates the application to the selected language.
-   * It calls the TranslateService's use() method with the selected language.
+   * Sets the selected language for the app using the TranslateService.
+   *
+   * @method translate
+   * @returns {void}
    */
   translate(): void {
     this.translateService.use(this.lang);
   }
-
 }
