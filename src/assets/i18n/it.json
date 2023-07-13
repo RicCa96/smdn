@@ -1,7 +1,7 @@
 {
   "generic": {
     "messages": {
-      "confirm-deletion": "L'elemento verrà eliminato definitivamente. Vuoi procedere?"
+      "confirm_deletion": "L'elemento verrà eliminato definitivamente. Vuoi procedere?"
     }
   },
   "primeng": {
@@ -15,7 +15,7 @@
     "lt": "Minore di",
     "lte": "Minore o uguale a",
     "gt": "Maggiore di",
-    "gte": "MAgiore o uguale a",
+    "gte": "Maggiore o uguale a",
     "is": "È",
     "isNot": "Non è",
     "before": "Prima",
@@ -64,10 +64,10 @@
       },
       "collections": {
         "label": "Anagrafiche",
-        "dish-categories": "Categorie piatto",
+        "dish_categories": "Categorie piatto",
         "dishes": "Piatti",
         "restaurants": "Ristoranti",
-        "scheduled-events": "Programma eventi"
+        "scheduled_events": "Programma eventi"
       }
     },
     "auth": {
@@ -77,7 +77,7 @@
       },
       "reports": {
         "label": "Reports",
-        "emitted-orders": "Ordini emessi"
+        "emitted_orders": "Ordini emessi"
       }
     }
   }

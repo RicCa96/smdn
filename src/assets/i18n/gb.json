@@ -64,10 +64,10 @@
       },
       "collections": {
         "label": "Collections",
-        "dish-categories": "Dish categories",
+        "dish_categories": "Dish categories",
         "dishes": "Dishes",
         "restaurants": "Restaurants",
-        "scheduled-events": "Scheduled events"
+        "scheduled_events": "Scheduled events"
       }
     },
     "auth": {
@@ -77,7 +77,7 @@
       },
       "reports": {
         "label": "Reports",
-        "emitted-orders": "Emitted orders"
+        "emitted_orders": "Emitted orders"
       }
     }
   }

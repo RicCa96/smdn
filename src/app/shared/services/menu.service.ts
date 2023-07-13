@@ -1,17 +1,52 @@
 import {inject, Injectable} from '@angular/core';
-import {MenuItem} from "primeng/api";
-import {AuthService} from "../../services/auth.service";
-import {TranslateService} from "@ngx-translate/core";
+import {MenuItem} from 'primeng/api';
+import {AuthService} from '../../services/auth.service';
+
+interface MenuTranslation {
+  public: {
+    home: string;
+    schedule: string;
+    orders: string;
+  };
+  admin: {
+    security: {
+      label: string;
+      signup: string;
+    };
+    collections: {
+      label: string;
+      dish_categories: string;
+      dishes: string;
+      restaurants: string;
+      scheduled_events: string;
+    };
+  };
+  auth: {
+    pos: {
+      label: string;
+      counter: string;
+    };
+    reports: {
+      label: string;
+      emitted_orders: string;
+    };
+  }
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuService {
 
+  private _translation!: MenuTranslation;
+
   private authService = inject(AuthService);
-  private translateService = inject(TranslateService);
 
   constructor() {
+  }
+
+  setTranslation(translation: MenuTranslation): void {
+    this._translation = translation;
   }
 
   getUserMenu(): MenuItem[] {
@@ -34,15 +69,15 @@ export class MenuService {
   publicMenu(): MenuItem[] {
     return [
       {
-        label: this.translateService.instant('menu.public.home'),
+        label: this._translation.public.home,
         url: ''
       },
       {
-        label: 'menu.public.schedule',
+        label: this._translation.public.schedule,
         // url: 'schedule'
       },
       {
-        label: 'menu.public.orders',
+        label: this._translation.public.orders,
         // url: 'orders'
       },
     ];
@@ -51,31 +86,31 @@ export class MenuService {
   adminMenu(): MenuItem[] {
     return [
       {
-        label: 'menu.admin.security.label',
+        label: this._translation.admin.security.label,
         items: [
           {
-            label: 'menu.admin.security.signup',
+            label: this._translation.admin.security.signup,
             // url: 'auth/signup'
           }
         ]
       },
       {
-        label: 'menu.admin.collections.label',
+        label: this._translation.admin.collections.label,
         items: [
           {
-            label: 'menu.admin.collections.dish-categories',
+            label: this._translation.admin.collections.dish_categories,
             // url: 'collections/dish-categories'
           },
           {
-            label: 'menu.admin.collections.dishes',
+            label: this._translation.admin.collections.dishes,
             // url: 'collections/dishes'
           },
           {
-            label: 'menu.admin.collections.restaurants',
+            label: this._translation.admin.collections.restaurants,
             // url: 'collections/restaurants'
           },
           {
-            label: 'menu.admin.collections.scheduled-events',
+            label: this._translation.admin.collections.scheduled_events,
             // url: 'collections/scheduled-events'
           }
         ]
@@ -86,19 +121,19 @@ export class MenuService {
   authMenu(): MenuItem[] {
     return [
       {
-        label: 'menu.auth.pos.label',
+        label: this._translation.auth.pos.label,
         items: [
           {
-            label: 'menu.auth.pos.counter',
+            label: this._translation.auth.pos.counter,
             // url: 'pos/counter'
           }
         ]
       },
       {
-        label: 'menu.auth.reports.label',
+        label: this._translation.auth.reports.label,
         items: [
           {
-            label: 'menu.auth.pos.emitted-orders',
+            label: this._translation.auth.reports.emitted_orders,
             url: ''
           }
         ]
