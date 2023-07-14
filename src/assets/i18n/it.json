@@ -3,6 +3,7 @@
   "generic": {
     "confirm": "OK",
     "messages": {
+      "unauthenticated": "Devi avere eseguito l'acceso per accedere a questa funzionalità!",
       "confirm_deletion": "L'elemento verrà eliminato definitivamente. Vuoi procedere?"
     }
   },

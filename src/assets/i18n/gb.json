@@ -3,7 +3,8 @@
   "generic": {
     "confirm": "OK",
     "messages": {
-      "confirm-deletion": "The element will be permanently delete. Do you want to proceed?"
+      "unauthenticated": "You must login to access the required functionality.",
+      "confirm_deletion": "The element will be permanently delete. Do you want to proceed?"
     }
   },
   "primeng": {
