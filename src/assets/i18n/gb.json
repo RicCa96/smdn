@@ -1,6 +1,7 @@
 {
   "app_name": "smdn",
   "generic": {
+    "confirm": "OK",
     "messages": {
       "confirm-deletion": "The element will be permanently delete. Do you want to proceed?"
     }
@@ -80,6 +81,11 @@
         "label": "Reports",
         "emitted_orders": "Emitted orders"
       }
+    }
+  },
+  "components": {
+    "error": {
+      "title": "Oops. An error occurred."
     }
   }
 }
