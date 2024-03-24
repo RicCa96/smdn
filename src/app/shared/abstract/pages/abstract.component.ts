@@ -16,7 +16,7 @@ export abstract class AbstractComponent implements OnInit, OnDestroy {
   loading = false;
   userIsAuthenticated = false;
   userIsAdmin = false;
-  userId: string | undefined;
+  userId: string | null;
 
   protected constructor() {
     this.userIsAuthenticated = this.authService.getIsAuthenticated();
