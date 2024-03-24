@@ -57,31 +57,8 @@
   "menu": {
     "public": {
       "home": "Home",
-      "schedule": "Event schedule",
-      "orders": "Order now"
-    },
-    "admin": {
-      "security": {
-        "label": "Security",
-        "signup": "New user"
-      },
-      "collections": {
-        "label": "Collections",
-        "dish_categories": "Dish categories",
-        "dishes": "Dishes",
-        "restaurants": "Restaurants",
-        "scheduled_events": "Scheduled events"
-      }
-    },
-    "auth": {
-      "pos": {
-        "label": "POS",
-        "counter": "Counter"
-      },
-      "reports": {
-        "label": "Reports",
-        "emitted_orders": "Emitted orders"
-      }
+      "events": "Event schedule",
+      "restaurants": "Order now"
     }
   },
   "components": {

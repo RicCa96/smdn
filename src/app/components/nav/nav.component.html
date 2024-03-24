@@ -1,4 +1,6 @@
-<p-button #btn type="button" icon="pi pi-bars" (click)="menu.toggle($event)"
-        styleClass="p-button-rounded"></p-button>
+<button type="button" (click)="menu.toggle($event)">
+  <img ngSrc="assets/images/blob-haikei.svg" alt="Menu button" height="900" width="900">
+  <i class="pi pi-bars"></i>
+</button>
 <p-slideMenu #menu [model]="menuItems" [popup]="true" [viewportHeight]="250" [style]="{'min-width':'175px'}">
 </p-slideMenu>

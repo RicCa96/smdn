@@ -1,7 +1,5 @@
 export const environment = {
   production: true,
-  langOptions: [
-    {label: 'Italiano', value: 'it'},
-    {label: 'English', value: 'en'}
-  ]
+  langOptions: ['it', 'gb',]
+  // apiUrl: `http://localhost:3000`
 };

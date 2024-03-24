@@ -33,7 +33,6 @@
               "node_modules/primeng/resources/primeng.min.css",
               "node_modules/flag-icons/less/flag-icons.less",
               "node_modules/primeflex/primeflex.css",
-              "src/assets/themes/smdn-theme-override.less",
               "src/styles.less"
             ],
             "scripts": []
@@ -75,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "smdn:build:production"
+              "buildTarget": "smdn:build:production"
             },
             "development": {
-              "browserTarget": "smdn:build:development"
+              "buildTarget": "smdn:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "smdn:build"
+            "buildTarget": "smdn:build"
           }
         },
         "test": {

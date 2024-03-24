@@ -1,0 +1,80 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container>* {
+  width: 100%;
+}
+
+.container h1 {
+  margin: 10vh 20vw 0 20vw;
+}
+
+.container .restaurant {
+  margin: 10vh 0;
+  padding: 0 20vw;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "title title"
+    "link link"
+    "image desc";
+  grid-column-gap: 2vw;
+  grid-row-gap: 5vh;
+}
+
+.container .restaurant:nth-child(odd) {
+  grid-template-areas:
+    "title title"
+    "link link"
+    "desc image";
+}
+
+.container .restaurant h3 {
+  grid-area: title;
+  margin: 0;
+}
+
+.container .restaurant .link {
+  grid-area: link;
+  margin-top: -3vh;
+}
+
+.container .restaurant .link a {
+  text-decoration: none;
+  text-align: center;
+  color: #00000066;
+  border-bottom: 1px solid #f9d63966;
+}
+
+.container .restaurant .link a:hover {
+  color: #000000;
+  border-bottom: 1px solid #f9d639;
+}
+
+.container .restaurant img {
+  grid-area: image;
+  width: 100%;
+}
+
+.container .restaurant p {
+  grid-area: desc;
+  width: 100%;
+}
+
+/* MOBILE DEVICES */
+
+@media screen and (max-width:999px) {
+
+  .container .restaurant,
+  .container .restaurant:nth-child(odd) {
+    grid-template-areas:
+      "title title"
+      "link link"
+      "image image"
+      "desc desc";
+  }
+}

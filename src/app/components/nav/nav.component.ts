@@ -4,6 +4,7 @@ import {MenuService} from "../../shared/services/menu.service";
 import {ButtonModule} from "primeng/button";
 import {SlideMenuModule} from "primeng/slidemenu";
 import {LangChangeEvent, TranslateService} from "@ngx-translate/core";
+import {NgOptimizedImage} from "@angular/common";
 
 /**
  * The NavComponent displays the navigation menu for the application.
@@ -14,7 +15,7 @@ import {LangChangeEvent, TranslateService} from "@ngx-translate/core";
 @Component({
   selector: '[smdn-nav]',
   standalone: true,
-  imports: [ButtonModule, SlideMenuModule],
+  imports: [ButtonModule, SlideMenuModule, NgOptimizedImage],
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.less']
 })
