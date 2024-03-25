@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'BERNIER';
+    src: url('BERNIERDistressed-Regular.woff2') format('woff2'),
+        url('BERNIERDistressed-Regular.woff') format('woff'),
+        url('BERNIERDistressed-Regular.svg#BERNIERDistressed-Regular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.bernier {
+  font-family: 'BERNIER', sans-serif;
+}
+

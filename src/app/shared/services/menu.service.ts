@@ -27,27 +27,19 @@ export class MenuService {
     return [...this.publicMenu()];
   }
 
-  get separator(): MenuItem {
-    return {
-      separator: true
-    } as MenuItem;
-  }
-
   publicMenu(): MenuItem[] {
     return [
       {
         label: this._translation.public.home,
-        routerLink: '',
-        icon: PrimeIcons.HOME
+        routerLink: '/'
       },
       {
         label: this._translation.public.events,
-        routerLink: 'events',
-        icon: PrimeIcons.CALENDAR
+        routerLink: '/events'
       },
       {
         label: this._translation.public.restaurants,
-        routerLink: 'restaurants'
+        routerLink: '/restaurants'
       },
     ];
   }

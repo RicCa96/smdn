@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Carneys';
+  src: url('CarneysGallery-script.woff2') format('woff2'),
+  url('CarneysGallery-script.woff') format('woff'),
+  url('CarneysGallery-script.svg#CarneysGalleryScript') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.carneys {
+  font-family: 'Carneys', cursive;
+}
+
