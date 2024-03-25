@@ -11,6 +11,7 @@ import {ConfirmationService, MessageService} from "primeng/api";
 import {ToastModule} from "primeng/toast";
 import {LangDropdownComponent} from "./components/lang-dropdown/lang-dropdown.component";
 import {NavComponent} from "./components/nav/nav.component";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -36,7 +37,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ConfirmDialogModule,
     ToastModule,
     LangDropdownComponent,
-    NavComponent
+    NavComponent,
+    FontAwesomeModule
   ],
   providers: [
     TranslateService,

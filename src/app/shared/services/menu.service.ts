@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {MenuItem} from 'primeng/api';
+import {MenuItem, PrimeIcons} from 'primeng/api';
 
 interface MenuTranslation {
   public: {
@@ -37,15 +37,17 @@ export class MenuService {
     return [
       {
         label: this._translation.public.home,
-        url: ''
+        routerLink: '',
+        icon: PrimeIcons.HOME
       },
       {
         label: this._translation.public.events,
-        url: 'events'
+        routerLink: 'events',
+        icon: PrimeIcons.CALENDAR
       },
       {
         label: this._translation.public.restaurants,
-        // url: 'restaurants'
+        routerLink: 'restaurants'
       },
     ];
   }

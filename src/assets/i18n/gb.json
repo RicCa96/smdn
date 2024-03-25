@@ -58,7 +58,7 @@
     "public": {
       "home": "Home",
       "events": "Event schedule",
-      "restaurants": "Order now"
+      "restaurants": "Our restaurants"
     }
   },
   "components": {
