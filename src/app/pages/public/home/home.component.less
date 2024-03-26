@@ -92,7 +92,7 @@
     h1 {
       position: relative;
       color: var(--text-color);
-      font-size: 100pt;
+      font-size: 96pt;
       animation: fadeIn 3s ease;
 
       &::before {
@@ -100,7 +100,8 @@
         position: absolute;
         color: var(--surface-300);
         font-family: 'Carneys', cursive, sans-serif;
-        transform: translate(-14%, -35%);
+        font-size: 75pt;
+
         z-index: -1;
       }
     }
@@ -139,19 +140,23 @@
       .number {
         position: absolute;
         color: #ffffff22;
-        font-size: 400pt;
+        font-size: 300pt;
         transform: translate(-22%, -50%);
       }
 
       .section-title {
         margin: 1rem 0;
         font-size: 60pt;
+        position: relative;
+        z-index: 1;
       }
 
       .section-description {
         color: #ffffff66;
         margin: 2.5rem 0 1.5rem 0;
         font-size: 16pt;
+        position: relative;
+        z-index: 1;
       }
 
       .section-link {
@@ -160,6 +165,8 @@
         background-color: var(--primary-color);
         color: var(--primary-color-text);
         border-radius: 50px;
+        position: relative;
+        z-index: 1;
 
         &:hover {
           background-color: var(--primary-700);
@@ -175,7 +182,7 @@
   .hero {
     .main-content {
       p {
-        font-size: 1rem;
+        font-size: 1.5rem;
       }
     }
     .column {
