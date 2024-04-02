@@ -28,6 +28,8 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/fonts/bernier/stylesheet.css",
+              "src/assets/fonts/carneys/stylesheet.css",
               "node_modules/primeicons/primeicons.css",
               "src/assets/themes/smdn-theme.css",
               "node_modules/primeng/resources/primeng.min.css",

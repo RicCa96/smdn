@@ -1,7 +1,16 @@
-@import "assets/fonts/bernier/stylesheet.css";
-@import "assets/fonts/carneys/stylesheet.css";
-
 body {
   margin: 0;
   padding: 0;
+}
+
+
+* {
+  /* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+  scrollbar-width: none;
+
+  /* Chrome, Edge and Safari */
+  &::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
 }
