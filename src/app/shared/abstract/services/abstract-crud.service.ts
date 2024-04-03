@@ -1,5 +1,5 @@
 import {HttpClient, HttpParams} from '@angular/common/http';
-import { Observable, Subject } from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 
 export abstract class AbstractCrudService<T> {
 
@@ -9,7 +9,8 @@ export abstract class AbstractCrudService<T> {
   constructor(
     private basePath: string,
     private crudClient: HttpClient
-  ) { }
+  ) {
+  }
 
   byId(id: string): Observable<T> {
     return this.crudClient
@@ -25,10 +26,7 @@ export abstract class AbstractCrudService<T> {
       params.set('pageSize', pageSize);
     }
     this.crudClient
-      .get<{ totalResults: number, list: T[] }>(
-        `${this.basePath}`,
-        {params}
-      )
+      .get<{ totalResults: number, list: T[] }>(`${this.basePath}`, {params})
       .subscribe(
         response => {
           this.list = response.list;

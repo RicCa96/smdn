@@ -2,39 +2,37 @@ import {ScheduledEventService} from '../../../services/scheduled-events.service'
 import {ScheduledEvent} from '../../../models/scheduled-event.model';
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
+import {RouterLink} from "@angular/router";
+import {TranslateModule, TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',
-  styleUrls: ['./events.component.less']
+  styleUrls: ['./events.component.less'],
+  standalone: true,
+  imports: [RouterLink, TranslateModule]
 })
 export class EventsComponent implements OnInit, OnDestroy {
 
-  // TODO set this in the translation file
-  monthLabel = [
-    { full: `Gen`, short: `01` },
-    { full: `Feb`, short: `02` },
-    { full: `Mar`, short: `03` },
-    { full: `Apr`, short: `04` },
-    { full: `Mag`, short: `05` },
-    { full: `Giu`, short: `06` },
-    { full: `Lug`, short: `07` },
-    { full: `Ago`, short: `08` },
-    { full: `Set`, short: `09` },
-    { full: `Ott`, short: `10` },
-    { full: `Nov`, short: `11` },
-    { full: `Dic`, short: `12` },
-  ];
+  monthLabel: { full: string, short: string }[] = [];
 
   private listSubs?: Subscription;
   list: ScheduledEvent[] = [];
   loading = false;
   schedule: { date: string, month: number, events: ScheduledEvent[] }[] = [];
 
+  get translatePrefix(): string {
+    return 'pages.public.events.';
+  }
+
   constructor(
-    // private breakpointObserver: BreakpointObserver,
-    public scheduledEventsService: ScheduledEventService
-  ) { }
+    public scheduledEventsService: ScheduledEventService,
+    private translate: TranslateService
+  ) {
+    this.translate.get(this.translatePrefix + 'monthLabels').subscribe({
+      next: res => this.monthLabel = res
+    })
+  }
 
   ngOnInit() {
     this.loading = true;

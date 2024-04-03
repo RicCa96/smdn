@@ -1,10 +1,14 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
   {
     path: ``,
-    loadChildren: () => import('./pages/public/public.module').then(m => m.PublicModule)
+    loadComponent: () => import('./pages/public/home/home.component').then(c => c.HomeComponent)
+  },
+  {
+    path: `events`,
+    loadComponent: () => import('./pages/public/events/events.component').then(c => c.EventsComponent)
   },
 ];
 
@@ -12,4 +16,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
