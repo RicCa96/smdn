@@ -3,8 +3,7 @@
   @for (day of schedule; track day.date) {
     <div class="weekday">
       <div class="date">
-        {{ day.date }}
-        {{ monthLabel[day.month].short }}
+        {{ day.date }}/{{ monthLabel[day.month].short }}
       </div>
       <div class="content">
         @for (event of day.events; track event._id) {

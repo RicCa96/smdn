@@ -5,8 +5,8 @@ import {AbstractCrudService} from './abstract-crud.service';
 export abstract class AbstractLookupService<T> extends AbstractCrudService<T> {
 
   constructor(
-    private lookupServiceBasePath: string,
-    private lookupClient: HttpClient
+    lookupServiceBasePath: string,
+    lookupClient: HttpClient
   ) {
     super(lookupServiceBasePath, lookupClient);
   }
@@ -16,9 +16,9 @@ export abstract class AbstractLookupService<T> extends AbstractCrudService<T> {
     if (query) {
       params.set('query', query);
     }
-    return this.lookupClient
+    return this.crudClient
       .get<T[]>(
-        `${this.lookupServiceBasePath}/lookup`,
+        `${this.basePath}/lookup`,
         {params}
       );
   }

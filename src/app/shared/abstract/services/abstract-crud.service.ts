@@ -3,12 +3,12 @@ import {Observable, Subject} from 'rxjs';
 
 export abstract class AbstractCrudService<T> {
 
-  private list: T[] = [];
-  private listUpdated = new Subject<{ totalResults: number, results: T[] }>();
+  protected list: T[] = [];
+  protected listUpdated = new Subject<{ totalResults: number, results: T[] }>();
 
   constructor(
-    private basePath: string,
-    private crudClient: HttpClient
+    protected basePath: string,
+    protected crudClient: HttpClient
   ) {
   }
 
