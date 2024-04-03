@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EventsComponent } from './events.component';
 import { RouterModule } from '@angular/router';
+import {TranslateModule} from "@ngx-translate/core";
 
 
 
@@ -9,9 +10,10 @@ import { RouterModule } from '@angular/router';
   declarations: [
     EventsComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-  ]
+    imports: [
+        CommonModule,
+        RouterModule,
+        TranslateModule,
+    ]
 })
 export class EventsModule { }

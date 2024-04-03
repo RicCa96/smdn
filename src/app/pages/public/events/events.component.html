@@ -1,21 +1,20 @@
 <div class="container">
-  <h1>Programma 2020</h1>
-  <ng-template #scheduleTemplate>
-    <div class="weekday" *ngFor="let day of schedule">
+  <h1>{{ 'pages.public.events.title' | translate }}</h1>
+  @for (day of schedule; track day.date) {
+    <div class="weekday">
       <div class="date">
         {{ day.date }}
-<!--        <ng-container *ngIf="!(isHandset$ | async); else monthAltTmpl">-->
-<!--          &nbsp;{{ monthLabel[day.month].full }}-->
-<!--        </ng-container>-->
-        <ng-template #monthAltTmpl>/{{ monthLabel[day.month].short }}</ng-template>
+        {{ monthLabel[day.month].short }}
       </div>
       <div class="content">
-        <div class="event" *ngFor="let event of day.events">
+        @for (event of day.events; track event._id)  {
+        <div class="event">
           <p class="time">{{ event.time }}</p>
           <h3>{{ event.title }}</h3>
           <h4>{{ event.subtitle ? event.subtitle : ' ' }}</h4>
         </div>
+        }
       </div>
     </div>
-  </ng-template>
+  }
 </div>

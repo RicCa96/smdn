@@ -65,5 +65,12 @@
     "error": {
       "title": "Oops. C'è stato un errore."
     }
+  },
+  "pages": {
+    "public": {
+      "events": {
+        "title": "programma 2024"
+      }
+    }
   }
 }

@@ -2,20 +2,22 @@
 
 .container {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   color: #ffffff;
-  background-image: url('../../../../assets/images/events_horizontal.jpg');
-  background-attachment: fixed;
+  background: url('../../../../assets/images/events_horizontal.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
-.container>* {
+.container > * {
   width: 100%;
 }
 
 .container h1 {
   margin: 10vh 20vw 0 20vw;
+  font-family: 'BERNIER', sans-serif;
+  font-size: 48pt;
 }
 
 .container .weekday {
@@ -28,7 +30,7 @@
 }
 
 .container .weekday .date {
-  font-family: Playfair Display, serif;
+  font-family: Carneys, serif;
   font-size: 10rem;
   font-weight: 700;
   color: #ffffff66;
@@ -71,7 +73,7 @@
 @media screen and (max-width:999px) {
 
   .container {
-    background-image: url('../../../../assets/images/events_vertical_new.jpg');
+    background: url('../../../../assets/images/events_vertical_new.jpg') no-repeat center center fixed;
   }
 
   .container .weekday .date {

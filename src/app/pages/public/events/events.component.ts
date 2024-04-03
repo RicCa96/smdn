@@ -1,9 +1,7 @@
-import { ScheduledEventService } from '../../../services/scheduled-events.service';
-import { ScheduledEvent } from '../../../models/scheduled-event.model';
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
-// import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
-import { map, shareReplay } from 'rxjs/operators';
+import {ScheduledEventService} from '../../../services/scheduled-events.service';
+import {ScheduledEvent} from '../../../models/scheduled-event.model';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-events',
@@ -12,15 +10,7 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class EventsComponent implements OnInit, OnDestroy {
 
-  // isHandset$: Observable<boolean> = this.breakpointObserver
-  //   .observe(
-  //     Breakpoints.Handset
-  //   )
-  //   .pipe(
-  //     map(result => result.matches),
-  //     shareReplay()
-  //   );
-
+  // TODO set this in the translation file
   monthLabel = [
     { full: `Gen`, short: `01` },
     { full: `Feb`, short: `02` },
