@@ -14,7 +14,7 @@
 
   h1 {
     width: 100%;
-    margin: 0 0 10vh 0;
+    margin: 0 0 5vh 0;
     padding: 5vh 20vw;
     font-family: 'BERNIER', sans-serif;
     font-size: 48pt;
@@ -27,7 +27,7 @@
     min-height: 45vh;
     color: #ffffff;
     backdrop-filter: brightness(0.25);
-    margin: 10vh 0;
+    margin: 5vh 0;
 
     .date {
       font-family: Carneys, serif;
@@ -74,22 +74,38 @@
   }
 }
 
-/* MOBILE DEVICES */
 
-@media screen and (max-width: 999px) {
+/* TABLETS */
 
+@media screen and (max-width: 1023px) {
   .container {
     .weekday {
       .date {
-        font-size: 7rem;
+        font-size: 48pt;
+      }
+
+      .content {
+        grid-template-columns: auto auto;
+      }
+
+      .event {
+        margin: 0;
+      }
+    }
+  }
+}
+
+/* SMARTPHONES */
+
+@media screen and (max-width: 425px) {
+  .container {
+    .weekday {
+      .date {
+        font-size: 32pt;
       }
 
       .content {
         grid-template-columns: auto;
-      }
-
-      .event {
-        margin: 2rem 0;
       }
     }
   }
