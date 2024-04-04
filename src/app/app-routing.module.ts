@@ -10,6 +10,10 @@ const routes: Routes = [
     path: `events`,
     loadComponent: () => import('./pages/public/events/events.component').then(c => c.EventsComponent)
   },
+  {
+    path: `restaurants`,
+    loadComponent: () => import('./pages/public/restaurants/restaurants.component').then(c => c.RestaurantsComponent)
+  },
 ];
 
 @NgModule({
