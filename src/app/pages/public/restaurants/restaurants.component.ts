@@ -10,7 +10,8 @@ import {Component} from '@angular/core';
 export class RestaurantsComponent {
 
   get translatePrefix(): string {
-    return 'pages.public.home.';
+    return 'pages.public.restaurants.';
   }
 
+  // TODO onInit select 'trattoria' or 'birreria' before loading and showing the correct menu
 }

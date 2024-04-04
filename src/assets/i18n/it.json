@@ -38,11 +38,61 @@
     "choose": "Scegli",
     "upload": "Carica",
     "cancel": "Annulla",
-    "dayNames": ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"],
-    "dayNamesShort": ["Dom", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab"],
-    "dayNamesMin": ["Do","Lu","Ma","Me","Gi","Ve","Sa"],
-    "monthNames": ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"],
-    "monthNamesShort": ["Gen", "Feb", "Mar", "Apr", "Mag", "Giu","Lug", "Ago", "Set", "Ott", "Nov", "Dic"],
+    "dayNames": [
+      "Domenica",
+      "Lunedì",
+      "Martedì",
+      "Mercoledì",
+      "Giovedì",
+      "Venerdì",
+      "Sabato"
+    ],
+    "dayNamesShort": [
+      "Dom",
+      "Lun",
+      "Mar",
+      "Mer",
+      "Gio",
+      "Ven",
+      "Sab"
+    ],
+    "dayNamesMin": [
+      "Do",
+      "Lu",
+      "Ma",
+      "Me",
+      "Gi",
+      "Ve",
+      "Sa"
+    ],
+    "monthNames": [
+      "Gennaio",
+      "Febbraio",
+      "Marzo",
+      "Aprile",
+      "Maggio",
+      "Giugno",
+      "Luglio",
+      "Agosto",
+      "Settembre",
+      "Ottobre",
+      "Novembre",
+      "Dicembre"
+    ],
+    "monthNamesShort": [
+      "Gen",
+      "Feb",
+      "Mar",
+      "Apr",
+      "Mag",
+      "Giu",
+      "Lug",
+      "Ago",
+      "Set",
+      "Ott",
+      "Nov",
+      "Dic"
+    ],
     "dateFormat": "dd/mm/yy",
     "firstDayOfWeek": 1,
     "today": "Oggi",
@@ -85,19 +135,57 @@
       "events": {
         "title": "programma 2024",
         "monthLabels": [
-          { "full": "Gen", "short": "01" },
-          { "full": "Feb", "short": "02" },
-          { "full": "Mar", "short": "03" },
-          { "full": "Apr", "short": "04" },
-          { "full": "Mag", "short": "05" },
-          { "full": "Giu", "short": "06" },
-          { "full": "Lug", "short": "07" },
-          { "full": "Ago", "short": "08" },
-          { "full": "Set", "short": "09" },
-          { "full": "Ott", "short": "10" },
-          { "full": "Nov", "short": "11" },
-          { "full": "Dic", "short": "12" }
+          {
+            "full": "Gen",
+            "short": "01"
+          },
+          {
+            "full": "Feb",
+            "short": "02"
+          },
+          {
+            "full": "Mar",
+            "short": "03"
+          },
+          {
+            "full": "Apr",
+            "short": "04"
+          },
+          {
+            "full": "Mag",
+            "short": "05"
+          },
+          {
+            "full": "Giu",
+            "short": "06"
+          },
+          {
+            "full": "Lug",
+            "short": "07"
+          },
+          {
+            "full": "Ago",
+            "short": "08"
+          },
+          {
+            "full": "Set",
+            "short": "09"
+          },
+          {
+            "full": "Ott",
+            "short": "10"
+          },
+          {
+            "full": "Nov",
+            "short": "11"
+          },
+          {
+            "full": "Dic",
+            "short": "12"
+          }
         ]
+      },
+      "restaurants": {
       }
     }
   }
