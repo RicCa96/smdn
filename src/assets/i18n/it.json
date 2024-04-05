@@ -114,6 +114,12 @@
   "components": {
     "error": {
       "title": "Oops. C'è stato un errore."
+    },
+    "restaurant_picker": {
+      "options": {
+        "restaurant": "ristorante",
+        "pub": "birreria"
+      }
     }
   },
   "pages": {

@@ -1,0 +1,57 @@
+.p-dialog-content {
+  padding: 0 !important;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  height: 100%;
+
+  li {
+    list-style: none;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    div {
+      height: 100%;
+      transition: all .5s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.pub {
+        background: url('../../../assets/images/pub_picker.jpg') no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      &.restaurant {
+        background: url('../../../assets/images/restaurant_picker.jpg') no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: var(--highlight-text-color);
+        font-size: 32pt;
+        backdrop-filter: brightness(0.25);
+        transition: all .5s;
+        z-index: 1;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      div {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

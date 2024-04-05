@@ -1,0 +1,11 @@
+<ul>
+  @for (option of options; track option) {
+    <li>
+      <div [ngClass]="option">
+        <a class="bernier" (click)="ref.close(option)">
+          {{ ('components.restaurant_picker.options.' + option) | translate }}
+        </a>
+      </div>
+    </li>
+  }
+</ul>
