@@ -41,11 +41,19 @@ ul {
         text-decoration: none;
         color: var(--highlight-text-color);
         font-size: 32pt;
-        backdrop-filter: brightness(0.25);
         transition: all .5s;
         z-index: 1;
       }
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.75);
+      }
     }
+
 
     &:hover,
     &:focus {
@@ -53,5 +61,13 @@ ul {
         transform: scale(1.2);
       }
     }
+  }
+}
+
+/* TABLETS & SMARTPHONES */
+
+@media screen and (max-width: 1023px) {
+  ul {
+    grid-template-columns: auto;
   }
 }

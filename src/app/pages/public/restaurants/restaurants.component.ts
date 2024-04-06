@@ -6,12 +6,14 @@ import {JsonPipe} from "@angular/common";
 import {PubMenu, RestaurantMenu} from "../../../models/dish.model";
 import {MenusService} from "../../../services/menus.service";
 import {Subscription} from "rxjs";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-restaurants',
   standalone: true,
   imports: [
-    JsonPipe
+    JsonPipe,
+    TranslateModule
   ],
   templateUrl: './restaurants.component.html',
   styleUrl: './restaurants.component.less'

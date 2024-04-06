@@ -1,4 +1,2 @@
-<h1>{{ selectedRestaurant }}</h1>
-@if (menus && selectedRestaurant) {
-  <pre>{{ menus[selectedRestaurant] | json }}</pre>
-}
+<h1>{{ translatePrefix + selectedRestaurant | translate }}</h1>
+<pre>{{ currentMenu | json }}</pre>
