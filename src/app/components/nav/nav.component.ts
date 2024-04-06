@@ -2,9 +2,10 @@ import {Component, inject} from '@angular/core';
 import {MenuItem} from "primeng/api";
 import {MenuService} from "../../shared/services/menu.service";
 import {ButtonModule} from "primeng/button";
-import {SlideMenuModule} from "primeng/slidemenu";
 import {LangChangeEvent, TranslateService} from "@ngx-translate/core";
 import {NgOptimizedImage} from "@angular/common";
+import {SidebarModule} from "primeng/sidebar";
+import {MenuModule} from "primeng/menu";
 
 /**
  * The NavComponent displays the navigation menu for the application.
@@ -15,7 +16,7 @@ import {NgOptimizedImage} from "@angular/common";
 @Component({
   selector: '[smdn-nav]',
   standalone: true,
-  imports: [ButtonModule, SlideMenuModule, NgOptimizedImage],
+  imports: [ButtonModule, NgOptimizedImage, SidebarModule, MenuModule],
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.less']
 })
@@ -38,6 +39,13 @@ export class NavComponent {
    * @memberof NavComponent
    */
   private translateService = inject(TranslateService);
+
+  /**
+   * Indicates whether the menu sidebar is visible or not.
+   *
+   * @type {boolean}
+   */
+  public isMenuSidebarVisible = false;
 
   /**
    * The menu items to be displayed in the navigation menu.

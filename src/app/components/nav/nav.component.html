@@ -1,6 +1,12 @@
-<button type="button" (click)="menu.toggle($event)">
+<button type="button" (click)="isMenuSidebarVisible = true">
   <img ngSrc="../../../assets/images/menu_blob.svg" alt="Menu button" height="900" width="900">
   <i class="pi pi-bars"></i>
 </button>
-<p-slideMenu #menu [model]="menuItems" [popup]="true" [viewportHeight]="250" [style]="{'min-width':'175px'}">
-</p-slideMenu>
+
+<p-sidebar [(visible)]="isMenuSidebarVisible">
+  <p-menu [model]="menuItems"></p-menu>
+</p-sidebar>
+
+<!--FIXME old version-->
+<!--<p-slideMenu #menu [model]="menuItems" [popup]="true" [viewportHeight]="250" [style]="{'min-width':'175px'}">-->
+<!--</p-slideMenu>-->
