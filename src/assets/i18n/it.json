@@ -117,8 +117,8 @@
     },
     "restaurant_picker": {
       "options": {
-        "restaurant": "ristorante",
-        "pub": "birreria"
+        "restaurant": "menù ristorante",
+        "pub": "menù birreria"
       }
     }
   },

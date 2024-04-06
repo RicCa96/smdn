@@ -1,1 +1,4 @@
 <h1>{{ selectedRestaurant }}</h1>
+@if (menus && selectedRestaurant) {
+  <pre>{{ menus[selectedRestaurant] | json }}</pre>
+}

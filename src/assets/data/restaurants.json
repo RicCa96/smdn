@@ -1,0 +1,185 @@
+{
+  "restaurant": {
+    "appetizers": [
+      {
+        "name": "Tagliere di salumi e formaggi",
+        "price": 4.50
+      }
+    ],
+    "pasta": [
+      {
+        "name": "Cappelletti in brodo",
+        "price": 9
+      },
+      {
+        "name": "Cappelletti alla panna",
+        "price": 9
+      },
+      {
+        "name": "Tortelli verdi al burro",
+        "price": 8
+      },
+      {
+        "name": "Tortelli verdi al lardo",
+        "price": 8
+      },
+      {
+        "name": "Gramigna con salsiccia",
+        "price": 6.50
+      }
+    ],
+    "mains": [
+      {
+        "name": "Grigliata mista",
+        "price": 12
+      },
+      {
+        "name": "Salsiccia alla griglia",
+        "price": 10
+      },
+      {
+        "name": "Barzigole di pecora",
+        "price": 14
+      }
+    ],
+    "sides": [
+      {
+        "name": "Patate fritte",
+        "price": 3.50
+      },
+      {
+        "name": "Insalata mista",
+        "price": 3.50
+      }
+    ],
+    "desserts": [
+      {
+        "name": "Zuppa inglese",
+        "price": 5
+      },
+      {
+        "name": "Torte della nonna",
+        "price": 5
+      }
+    ],
+    "drinks": [
+      {
+        "name": "Acqua nat/gas 0,5l",
+        "options": [
+          "Naturale",
+          "Frizzante"
+        ],
+        "price": 1
+      },
+      {
+        "name": "Acqua nat/gas 1l",
+        "price": 2
+      },
+      {
+        "name": "Coca cola/fanta/sprite 33cl",
+        "price": 3.50
+      },
+      {
+        "name": "Birra Moretti 66cl",
+        "price": 4
+      },
+      {
+        "name": "Caraffa di pignoletto/lambrusco (1l)",
+        "price": 5
+      },
+      {
+        "name": "Mezza caraffa di pignoletto/lambrusco (0,5l)",
+        "price": 3
+      },
+      {
+        "name": "Bottiglia di prosecco",
+        "price": 6.50
+      }
+    ]
+  },
+  "pub": {
+    "hamburgers": [
+      {
+        "name": "Hamburger classico",
+        "options": [
+          "Burger",
+          "Fontina",
+          "Insalata",
+          "Pomodoro",
+          "Ketchup",
+          "Maionese"
+        ],
+        "price": 6
+      }
+    ],
+    "sandwiches": [
+      {
+        "name": "Piadina",
+        "options": [
+          "Cotto e fontina",
+          "Crudo e mozzarella"
+        ],
+        "price": 4
+      }
+    ],
+    "sides": [
+      {
+        "name": "Patate fritte",
+        "price": 3
+      },
+      {
+        "name": "Polenta fritta",
+        "price": 3.50
+      }
+    ],
+    "drinks": [
+      {
+        "name": "Spritz",
+        "price": 3.50
+      },
+      {
+        "name": "Cocktail 0,3l",
+        "options": [
+          "Gin & Tonic",
+          "Vodka & Red Bull",
+          "Cuba libre",
+          "Pesquito"
+        ],
+        "price": 5
+      },
+      {
+        "name": "Birra spina 0,4l",
+        "price": 5
+      },
+      {
+        "name": "Birra spina 0,3l",
+        "price": 3.50
+      },
+      {
+        "name": "Birra bottiglia 33cl",
+        "price": 2.50
+      },
+      {
+        "name": "Bottiglia prosecco",
+        "price": 6.50
+      },
+      {
+        "name": "Bibite in lattina 33cl",
+        "options": [
+          "Coca cola",
+          "Fanta",
+          "Sprite"
+        ],
+        "price": 3.50
+      },
+      {
+        "name": "Acqua bottiglia 0,5l",
+        "options": [
+          "Naturale",
+          "Frizzante"
+        ],
+        "price": 1
+      }
+    ]
+  }
+}
