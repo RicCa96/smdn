@@ -1,2 +1,23 @@
-<h1>{{ translatePrefix + selectedRestaurant | translate }}</h1>
-<pre>{{ currentMenu | json }}</pre>
+<article class="container">
+  <h1 class="bernier">{{ translatePrefix + selectedRestaurant | translate }}</h1>
+  @for (category of getMenuCategories(currentMenu); track category) {
+    <section>
+      <h2 class="carneys">{{ (translatePrefix + 'category.' + category) | translate }}</h2>
+      <div class="content">
+        @for (menuItem of getMenuItems(currentMenu, category); track menuItem.name) {
+          <div class="menu-item">
+            <p>{{ menuItem.price | currency:'EUR' }}</p>
+            <h3>{{ menuItem.name }}</h3>
+            @if (!!menuItem.options && menuItem.options.length > 0) {
+              <ul>
+                @for (op of menuItem.options; track op) {
+                  <li>{{ op }}</li>
+                }
+              </ul>
+            }
+          </div>
+        }
+      </div>
+    </section>
+  }
+</article>

@@ -8,7 +8,7 @@
       <div class="content">
         @for (event of day.events; track event._id) {
           <div class="event">
-            <p class="time">{{ event.time }}</p>
+            <p>{{ event.time }}</p>
             <h3>{{ event.title }}</h3>
             <h4>{{ event.subtitle ? event.subtitle : ' ' }}</h4>
           </div>

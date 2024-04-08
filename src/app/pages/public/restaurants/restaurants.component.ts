@@ -2,8 +2,8 @@ import {Component, inject, OnInit} from '@angular/core';
 import {DialogService} from "primeng/dynamicdialog";
 import {RestaurantPickerComponent} from "../../../components/restaurant-picker/restaurant-picker.component";
 import {RestaurantTypeEnum} from "../../../enums/restaurant-type.enum";
-import {JsonPipe} from "@angular/common";
-import {PubMenu, RestaurantMenu} from "../../../models/dish.model";
+import {CurrencyPipe} from "@angular/common";
+import {Dish, PubMenu, RestaurantMenu} from "../../../models/dish.model";
 import {MenusService} from "../../../services/menus.service";
 import {Subscription} from "rxjs";
 import {TranslateModule} from "@ngx-translate/core";
@@ -12,8 +12,8 @@ import {TranslateModule} from "@ngx-translate/core";
   selector: 'app-restaurants',
   standalone: true,
   imports: [
-    JsonPipe,
-    TranslateModule
+    TranslateModule,
+    CurrencyPipe
   ],
   templateUrl: './restaurants.component.html',
   styleUrl: './restaurants.component.less'
@@ -48,7 +48,7 @@ export class RestaurantsComponent implements OnInit {
     this.openRestaurantPicker();
   }
 
-  openRestaurantPicker() {
+  protected openRestaurantPicker() {
     const ref = this.dialogService.open(RestaurantPickerComponent, {
       showHeader: false,
       styleClass: 'full-size-dialog',
@@ -60,5 +60,13 @@ export class RestaurantsComponent implements OnInit {
         this.selectedRestaurant = selection;
       }
     })
+  }
+
+  protected getMenuCategories(menu: RestaurantMenu | PubMenu) {
+    return Object.keys(menu);
+  }
+
+  protected getMenuItems(menu: RestaurantMenu | PubMenu, category: string): Dish[] {
+    return (menu as { [key: string]: Dish[] })[category];
   }
 }

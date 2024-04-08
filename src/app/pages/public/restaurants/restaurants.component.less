@@ -1,0 +1,102 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  color: #ffffff;
+  background: url('../../../../assets/images/restaurants.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  & > * {
+    width: 100%;
+  }
+
+  h1 {
+    width: 100%;
+    margin: 0;
+    padding: 5vh 20vw;
+    font-size: 48pt;
+    backdrop-filter: brightness(0.25);
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    color: #ffffff;
+    backdrop-filter: brightness(0.25);
+
+    h2 {
+      color: #ffffff66;
+      margin: 3rem 20vw;
+    }
+
+    .content {
+      width: 100%;
+      padding: 0 20vw 3rem 20vw;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      align-items: center;
+      gap: 2rem;
+
+      .menu-item {
+        border-left: 5px solid var(--primary-color);
+        padding-left: 1rem;
+        min-height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & > * {
+          margin: 0;
+        }
+
+        p {
+          font-weight: 600;
+          color: #ffffff88;
+        }
+
+        h3 {
+          font-weight: 500;
+          font-size: 1rem;
+        }
+
+        ul {
+          font-weight: 400;
+          color: var(--primary-color);
+          opacity: 55%;
+          list-style: circle;
+        }
+      }
+    }
+  }
+}
+
+/* TABLETS */
+
+@media screen and (max-width: 1023px) {
+  .container {
+    section {
+      .content {
+        grid-template-columns: auto auto;
+      }
+    }
+  }
+}
+
+/* SMARTPHONES */
+
+@media screen and (max-width: 425px) {
+  .container {
+    h1 {
+      font-size: 32pt;
+      padding-top: 5rem;
+    }
+
+    section {
+      .content {
+        grid-template-columns: auto;
+      }
+    }
+  }
+}

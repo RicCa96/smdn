@@ -192,6 +192,17 @@
         ]
       },
       "restaurants": {
+        "restaurant": "ristorante",
+        "pub": "birreria",
+        "category": {
+          "appetizers": "Antipasti",
+          "pasta": "Primi",
+          "mains": "Secondi",
+          "sandwiches": "Panini",
+          "sides": "Contorni",
+          "desserts": "Dessert",
+          "drinks": "Bevande"
+        }
       }
     }
   }

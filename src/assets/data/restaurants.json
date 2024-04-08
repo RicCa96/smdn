@@ -64,7 +64,7 @@
     ],
     "drinks": [
       {
-        "name": "Acqua nat/gas 0,5l",
+        "name": "Acqua 0,5l",
         "options": [
           "Naturale",
           "Frizzante"
@@ -72,23 +72,44 @@
         "price": 1
       },
       {
-        "name": "Acqua nat/gas 1l",
+        "name": "Acqua 1l",
+        "options": [
+          "Naturale",
+          "Frizzante"
+        ],
         "price": 2
       },
       {
-        "name": "Coca cola/fanta/sprite 33cl",
+        "name": "Bibite in lattina 33cl",
+        "options": [
+          "Coca cola",
+          "Fanta",
+          "Sprite"
+        ],
         "price": 3.50
       },
       {
-        "name": "Birra Moretti 66cl",
+        "name": "Birra bottiglia 66cl",
+        "options": [
+          "Moretti",
+          "Ichnusa"
+        ],
         "price": 4
       },
       {
-        "name": "Caraffa di pignoletto/lambrusco (1l)",
+        "name": "Caraffa di vino 1l",
+        "options": [
+          "Lambrusco",
+          "Pignoletto"
+        ],
         "price": 5
       },
       {
-        "name": "Mezza caraffa di pignoletto/lambrusco (0,5l)",
+        "name": "Mezza caraffa di vino (0,5l)",
+        "options": [
+          "Lambrusco",
+          "Pignoletto"
+        ],
         "price": 3
       },
       {
@@ -98,21 +119,11 @@
     ]
   },
   "pub": {
-    "hamburgers": [
+    "sandwiches": [
       {
         "name": "Hamburger classico",
-        "options": [
-          "Burger",
-          "Fontina",
-          "Insalata",
-          "Pomodoro",
-          "Ketchup",
-          "Maionese"
-        ],
         "price": 6
-      }
-    ],
-    "sandwiches": [
+      },
       {
         "name": "Piadina",
         "options": [
