@@ -12,7 +12,7 @@ interface MenuTranslation {
 @Injectable({
   providedIn: 'root'
 })
-export class MenuService {
+export class NavService {
 
   private _translation!: MenuTranslation;
 
@@ -23,11 +23,11 @@ export class MenuService {
     this._translation = translation;
   }
 
-  getUserMenu(): MenuItem[] {
-    return [...this.publicMenu()];
+  getUserNavMenu(): MenuItem[] {
+    return [...this.publicNavMenu()];
   }
 
-  publicMenu(): MenuItem[] {
+  publicNavMenu(): MenuItem[] {
     return [
       {
         label: this._translation.public.home,

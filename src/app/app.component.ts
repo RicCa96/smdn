@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {PrimeNGConfig} from "primeng/api";
 import {TranslateService} from "@ngx-translate/core";
-import {MenuService} from "./shared/services/menu.service";
+import {NavService} from "./shared/services/nav.service";
 import {Subscription} from "rxjs";
 
 @Component({
@@ -16,7 +16,7 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(
     private primengConfig: PrimeNGConfig,
     private translateService: TranslateService,
-    private menuService: MenuService
+    private menuService: NavService
   ) {
   }
 

@@ -1,11 +1,12 @@
 import {Component, inject} from '@angular/core';
 import {MenuItem} from "primeng/api";
-import {MenuService} from "../../shared/services/menu.service";
+import {NavService} from "../../shared/services/nav.service";
 import {ButtonModule} from "primeng/button";
 import {LangChangeEvent, TranslateService} from "@ngx-translate/core";
 import {NgOptimizedImage} from "@angular/common";
 import {SidebarModule} from "primeng/sidebar";
 import {MenuModule} from "primeng/menu";
+import {DialogService} from "primeng/dynamicdialog";
 
 /**
  * The NavComponent displays the navigation menu for the application.
@@ -26,10 +27,10 @@ export class NavComponent {
    * The MenuService instance used to retrieve the menu items.
    *
    * @private
-   * @type {MenuService}
+   * @type {NavService}
    * @memberof NavComponent
    */
-  private menuService = inject(MenuService);
+  private readonly navService = inject(NavService);
 
   /**
    * The TranslateService instance used to translate the menu items.
@@ -38,12 +39,16 @@ export class NavComponent {
    * @type {TranslateService}
    * @memberof NavComponent
    */
-  private translateService = inject(TranslateService);
+  private readonly translateService = inject(TranslateService);
+
+  private readonly dialogService = inject(DialogService);
 
   /**
    * Indicates whether the menu sidebar is visible or not.
    *
+   * @public
    * @type {boolean}
+   * @memberof NavComponent
    */
   public isMenuSidebarVisible = false;
 
@@ -54,7 +59,7 @@ export class NavComponent {
    * @type {MenuItem[]}
    * @memberof NavComponent
    */
-  public menuItems: MenuItem[] = [];
+  public navItems: MenuItem[] = [];
 
   /**
    * Creates an instance of NavComponent.
@@ -67,9 +72,17 @@ export class NavComponent {
      */
     this.translateService.onLangChange.subscribe({
       next: (evt: LangChangeEvent) => {
-        this.menuService.setTranslation(evt.translations.menu);
-        this.menuItems = this.menuService.getUserMenu();
+        this.navService.setTranslation(evt.translations.menu);
+        this.navItems = this.navService.getUserNavMenu();
       }
+    });
+  }
+
+
+  navItemClick(): void {
+    this.isMenuSidebarVisible = false;
+    this.dialogService.dialogComponentRefMap.forEach(dialog => {
+      dialog.destroy();
     });
   }
 
